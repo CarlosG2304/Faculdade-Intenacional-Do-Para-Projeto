@@ -3,15 +3,19 @@
 /**
  * @type { Object.<string, import("knex").Knex.Config> }
  */
+const env = require('./env')
+
+
+
 module.exports = {
 
   client: 'mysql2',
   connection: {
-    host: '127.0.0.1',
+    host: env.heroku.host,
     port: 3306,
-    user: 'root',
-    password: '1001',
-    database: 'myapp_test'
+    user: env.heroku.user,
+    password: env.heroku.password,
+    database: env.heroku.database
 
   },
   pool: {
