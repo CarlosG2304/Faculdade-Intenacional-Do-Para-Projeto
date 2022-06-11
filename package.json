@@ -4,7 +4,8 @@
   "description": "",
   "main": "express.js",
   "scripts": {
-    "start": "node Controller/express.js"
+    "start": "node Controller/express.js",
+    "postinstall": "knex migrate:latest"
   },
   "author": "Carlos Gabriel",
   "license": "ISC",
