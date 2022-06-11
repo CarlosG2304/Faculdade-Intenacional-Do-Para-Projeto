@@ -1,0 +1,21 @@
+{
+  "name": "projeto-engenharia-software",
+  "version": "1.0.0",
+  "description": "",
+  "main": "express.js",
+  "scripts": {
+    "start": "node Controller/express.js"
+  },
+  "author": "Carlos Gabriel",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "bootstrap": "^5.2.0-beta1",
+    "express": "^4.18.1",
+    "jquery": "^3.6.0",
+    "knex": "^2.1.0",
+    "mysql2": "^2.3.3",
+    "nodemailer": "^6.7.5",
+    "nodemon": "^2.0.16"
+  }
+}

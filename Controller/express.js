@@ -1,0 +1,64 @@
+const bodyParser = require('body-parser')
+const express = require('express')
+const app = express()
+const db = require('../Model/database')
+const mail = require('./mail')
+app.use(express.static('../View'))
+app.use(bodyParser.urlencoded({ extended: true }))
+app.use(bodyParser.json())
+
+const porta = 8080
+
+
+app.post('/envio', (req, res) => {
+  mail(req.body.email, res)
+}
+
+)
+
+app.get('/formulario', (req, res) => {
+
+  dados = {
+    nomeRepetido: 'false',
+    emailRepetido: 'false'
+  }
+  db('usuarios').select('nome', 'email').then(data => data.forEach(element => {
+
+    if (element['email'] == req.query.email) {
+      dados['emailRepetido'] = 'true'
+    }
+    if (element['nome'] == req.query.nome) {
+      dados['nomeRepetido'] = 'true'
+    }
+
+  })).then(() => res.status(200).send(JSON.stringify(dados)))
+
+
+})
+app.post('/formulario', (req, res, next) => {
+
+  const dados = {
+    nome: req.body.nome,
+    dataNascimento: req.body.data,
+    cpf: req.body.cpf,
+    curso: req.body.curso,
+    genero: req.body.genero,
+    email: req.body.email,
+    senha: req.body.senha,
+
+
+  }
+  console.log(dados)
+  insert = db('usuarios').insert(dados);
+
+  insert.then(data => {
+    res.send(data)
+  }).catch(e => {
+    console.log('Erro:', e.message);
+  }).finally(() => {
+    db.destroy();
+  })//JSON
+})
+
+
+app.listen(porta)
