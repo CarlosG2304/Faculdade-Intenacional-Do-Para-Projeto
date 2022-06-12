@@ -3,7 +3,7 @@
 /**
  * @type { Object.<string, import("knex").Knex.Config> }
  */
-const env = require('./env')
+const env = require('./Model/env')
 
 
 
@@ -23,7 +23,7 @@ module.exports = {
     max: 10
   },
   migrations: {
-    directory: __dirname + '/db/migrations',
+    directory: __dirname + '/Model/migrations',
     tableName: 'knex_migrations'
   }
 }
