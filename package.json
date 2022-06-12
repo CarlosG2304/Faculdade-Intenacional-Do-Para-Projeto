@@ -4,8 +4,7 @@
   "description": "",
   "main": "express.js",
   "scripts": {
-    "start": "node Controller/express.js",
-    "postinstall": "npx knex migrate:rollback"
+    "start": "node Controller/express.js"
   },
   "author": "Carlos Gabriel",
   "license": "ISC",
