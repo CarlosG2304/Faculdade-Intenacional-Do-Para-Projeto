@@ -210,10 +210,11 @@ padding: 0 0.5rem;
 
 }
 @media screen and (max-width: 650px){
-.container{
+div .container ,#container{
   width: 100%;
   height: auto;
   margin: auto;
+  padding: 0 !important;
 
 }
 body{
