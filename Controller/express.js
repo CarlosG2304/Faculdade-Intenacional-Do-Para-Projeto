@@ -10,6 +10,7 @@ app.use(bodyParser.json())
 const porta = process.env.PORT || 8080
 
 
+
 app.post('/envio', (req, res) => {
   mail(req.body.email, res)
 }

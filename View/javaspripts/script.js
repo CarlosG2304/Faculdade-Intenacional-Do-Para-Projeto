@@ -13,3 +13,6 @@ function nextImage() {
 
   document.getElementById("radio" + count).checked = true;
 }
+
+$('html').hide()
+$('html').fadeIn(4000)

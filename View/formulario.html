@@ -30,11 +30,11 @@
           </div>
         </div>
         <div class="input-group ">
-          <div class="input-box col-lg-12">
+          <div class="input-box col-12 col-sm-12 col-lg-12">
             <label for="firstname">Nome</label>
             <input id="name" type="text" name="name" placeholder="Digite o seu nome completo" required>
           </div>
-          <div class="input-box col-lg-5">
+          <div class="input-box col-5 col-sm-5 col-lg-5">
             <label for="data">Data de aniversario</label>
             <input type="date" class="form-control" id="data">
           </div>
@@ -90,98 +90,11 @@
   </div>
 
 </body>
-<script>
-
+<script>//Efeito 
   $('html').hide()
-  $('html').fadeIn(4000)
-
-  $.ajax({ url: 'formulario', success(data) { } })
-
-  $('form').submit(function (e) {
-    const nome = $('#name').val()
-    const data = $('#data').val()
-    const cpf = $('#cpf').val()
-    const curso = $('.form-select').val()
-    const email = $('#email').val()
-    const senha = $('#password').val()
-    const confimacaoS = $('#Confirmpassword').val()
-
-    let genero
-
-    $('input:radio[name=genero]').each(function () {
-      //Verifica qual está selecionado
-      if ($(this).is(':checked')) genero = $(this).val()
-    })
-
-    $.ajax({
-      url: 'formulario',
-      data: {
-        nome,
-        email
-      },
-      success(data) {
-
-        dado = JSON.parse(data)
-        verificacao(dado)
-
-      },
-      error(e) {
-        console.log('get', e)
-      }
-    })
-
-    function verificacao(dado) {
-
-      let boolean = ((dado['nomeRepetido'] == 'true') || (dado['emailRepetido'] == 'true'))
-
-
-
-
-      if (boolean) {
-
-        alert('Usuario ja cadastrado')
-
-      } else {
-        if (senha !== confimacaoS) {
-          alert("Senhas diferentes")
-
-        } else {
-          salvar()
-          alert("Cadastro realizado com sucesso")
-          $('body').fadeOut(2000)
-          setTimeout(function () {
-            window.location.replace("/index.html");
-          }, 2000)
-
-        }
-      }
-    }
-    function salvar() {
-      $.ajax({
-        url: 'formulario',
-        method: 'post',
-        data: {
-          nome,
-          data,
-          cpf,
-          genero,
-          curso,
-          email,
-          senha
-        },
-        success(data) {
-
-        },
-        error(e) {
-          console.log('post', e)
-        },
-      })
-    }
-
-    e.preventDefault()
-
-  })
+  $('html').fadeIn(3000)
 </script>
+<script src="./javaspripts/formulario.js"></script>
 
 <script type="text/javascript" src="//code.jquery.com/jquery-2.0.3.min.js"></script>
 <script type="text/javascript" src="//assets.locaweb.com.br/locastyle/2.0.6/javascripts/locastyle.js"></script>
