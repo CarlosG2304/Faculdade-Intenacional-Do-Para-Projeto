@@ -72,7 +72,7 @@ body{
   align-items: center;
 }
 
-.login-button button{
+.cadastro-button button{
   border: none;
   background-color: #6c63ff;
   padding: 0.4rem 1rem;
@@ -80,11 +80,11 @@ body{
   cursor: pointer;
 }
 
-.login-button button:hover{
+.cadastro-button button:hover{
   background-color: #6b63fff1;
 }
 
-.login-button button a {
+.cadastro-button button a {
   text-decoration: none;
   font-weight: 500;
   font-weight: #fff;

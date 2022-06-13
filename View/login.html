@@ -26,7 +26,7 @@
           <div class="title">
             <h1>Login</h1>
           </div>
-          <div class="login-button">
+          <div class="cadastro-button">
             <button><a href="formulario.html">Cadastrar-se</a></button>
           </div>
         </div>
@@ -68,14 +68,14 @@
 
         dado = JSON.parse(data)
         verificacao(dado)
-
+        console.log(dado)
       },
       error(e) {
         console.log('get', e)
       }
     })
     function verificacao(dado) {
-      let boolean = ((dado['verificacaoEmail'] == 'true') || (dado['verificacaoSenha'] == 'true'))
+      let boolean = dado['verificacaoEmail'] && dado['verificacaoSenha']
 
       if (boolean) {
         alert('Bem vindo')

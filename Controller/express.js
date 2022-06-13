@@ -28,10 +28,10 @@ app.get('/autenticacao', (req, res) => {
 
 
     if (element['email'] == req.query.email) {
-      dados['verificacaoEmail'] = 'true'
+      dados['verificacaoEmail'] = true
     }
     if (element['senha'] == req.query.senha) {
-      dados['verificacaoSenha'] = 'true'
+      dados['verificacaoSenha'] = true
     }
 
   })).then(() => res.status(200).send(JSON.stringify(dados)))
