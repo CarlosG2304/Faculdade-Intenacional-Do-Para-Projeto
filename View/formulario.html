@@ -25,6 +25,9 @@
           <div class="title">
             <h1>Cadastre-se</h1>
           </div>
+          <div class="login-button">
+            <button><a href="login.html">Entrar</a></button>
+          </div>
         </div>
         <div class="input-group ">
           <div class="input-box col-lg-12">
@@ -91,6 +94,8 @@
 
   $('html').hide()
   $('html').fadeIn(4000)
+
+  $.ajax({ url: 'formulario', success(data) { } })
 
   $('form').submit(function (e) {
     const nome = $('#name').val()

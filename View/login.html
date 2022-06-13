@@ -26,6 +26,9 @@
           <div class="title">
             <h1>Login</h1>
           </div>
+          <div class="login-button">
+            <button><a href="formulario.html">Cadastrar-se</a></button>
+          </div>
         </div>
         <div class="input-box">
           <label for="email">Email</label>
@@ -49,6 +52,8 @@
   $('html').hide()
   $('html').fadeIn(4000)
 
+  $.ajax({ url: 'autenticacao', success(data) { } })
+
   $('form').submit(function (e) {
     const email = $('#email').val()
     const senha = $('#password').val()
@@ -70,7 +75,7 @@
       }
     })
     function verificacao(dado) {
-      let boolean = ((dado['emailCorreto'] == 'true') || (dado['senhaCorreta'] == 'true'))
+      let boolean = ((dado['verificacaoEmail'] == 'true') || (dado['verificacaoSenha'] == 'true'))
 
       if (boolean) {
         alert('Bem vindo')
@@ -78,6 +83,7 @@
         alert('Email e/ou senha incorreta')
       }
     }
+    e.preventDefault()
   })
 </script>
 

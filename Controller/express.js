@@ -16,6 +16,30 @@ app.post('/envio', (req, res) => {
 
 )
 
+app.get('/autenticacao', (req, res) => {
+
+  dados = {
+    verificacaoEmail: false,
+    verificacaoSenha: false
+  }
+
+  db('usuarios').select('email', 'senha').then(data => data.forEach(element => {
+
+
+
+    if (element['email'] == req.query.email) {
+      dados['verificacaoEmail'] = 'true'
+    }
+    if (element['senha'] == req.query.senha) {
+      dados['verificacaoSenha'] = 'true'
+    }
+
+  })).then(() => res.status(200).send(JSON.stringify(dados)))
+    .catch(e => {
+      console.log('Erro:', e.message);
+    })
+
+})
 app.get('/formulario', (req, res) => {
 
   dados = {
@@ -32,6 +56,9 @@ app.get('/formulario', (req, res) => {
     }
 
   })).then(() => res.status(200).send(JSON.stringify(dados)))
+    .catch(e => {
+      console.log('Erro:', e.message);
+    })
 
 
 })
@@ -55,9 +82,7 @@ app.post('/formulario', (req, res, next) => {
     res.send(data)
   }).catch(e => {
     console.log('Erro:', e.message);
-  }).finally(() => {
-    db.destroy();
-  })//JSON
+  })
 })
 
 
