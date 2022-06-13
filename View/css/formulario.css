@@ -209,3 +209,21 @@ padding: 0 0.5rem;
 
 
 }
+@media screen and (max-width: 400px){
+.container{
+  width: 100%;
+  height: auto;
+  margin: auto;
+
+}
+body{
+  height: auto;
+}
+.input-group{
+  padding:0 1rem;
+}
+form{
+width: 28rem;
+margin: auto;
+}
+}
