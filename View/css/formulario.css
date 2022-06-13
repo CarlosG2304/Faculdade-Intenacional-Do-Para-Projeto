@@ -183,8 +183,29 @@ padding: 0 0.5rem;
  }  
  .container{
    width: 50%;
+   height: auto;
  }
  .form{
   width: 100%;
  }
+}
+@media screen and (max-width: 1000px){
+.container{
+  width: 90%;
+  height: auto;
+  margin: auto;
+  box-shadow: none;
+}
+.input-group{
+  flex-direction: row;
+  overflow-y: scroll;
+  flex-wrap: nowrap;
+  max-height: 10rem;
+  padding:0 2rem;
+}
+.gender-inputs{
+  margin-top: 2rem;
+}
+
+
 }
