@@ -222,6 +222,9 @@ body{
 .input-group{
   padding:0 1rem;
 }
+.form{
+  padding: 0;
+}
 form{
 width: 28rem;
 margin: auto;
