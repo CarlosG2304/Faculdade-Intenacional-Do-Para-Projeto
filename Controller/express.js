@@ -17,6 +17,19 @@ app.post('/envio', (req, res) => {
 
 )
 
+app.get('/meusdados', (req, res) => {
+
+  db('usuarios').where('email', '=', req.query.email)
+    .then(data => res.send(data[0]))
+})
+
+app.put('/meusdados', (req, res) => {
+
+  db('usuarios').where('email', '=', req.body.email).update(req.body)
+    .then(data => res.status(200).send(JSON.stringify(data)))
+
+})
+
 app.get('/autenticacao', (req, res) => {
 
   dados = {

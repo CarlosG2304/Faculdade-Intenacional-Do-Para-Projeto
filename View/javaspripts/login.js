@@ -25,6 +25,10 @@ $('form').submit(function (e) {
     if (boolean) {
       alert('Bem vindo')
       localStorage.setItem('email', email)
+      $('body').fadeOut(2000)
+      setTimeout(function () {
+        window.location.replace("/MeusDados.html");
+      }, 2000)
     } else {
       alert('Email e/ou senha incorreta')
     }

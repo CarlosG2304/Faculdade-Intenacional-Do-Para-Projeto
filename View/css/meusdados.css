@@ -1,0 +1,13 @@
+body{
+  background-color: black;
+}
+.container{
+  margin-top: 3%;
+}
+h1{
+  color: #229c9c;
+}
+
+label{
+  color: white;
+}
