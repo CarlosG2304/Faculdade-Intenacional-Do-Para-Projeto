@@ -1,5 +1,6 @@
 const bodyParser = require('body-parser')
 const express = require('express')
+const { data } = require('jquery')
 const app = express()
 const db = require('../Model/database')
 const mail = require('./mail')
@@ -13,9 +14,7 @@ const porta = process.env.PORT || 8080
 
 app.post('/envio', (req, res) => {
   mail(req.body.email, res)
-}
-
-)
+})
 
 app.get('/meusdados', (req, res) => {
 
@@ -23,10 +22,47 @@ app.get('/meusdados', (req, res) => {
     .then(data => res.send(data[0]))
 })
 
+app.get('/meusdados/verificacao', (req, res) => {
+
+  dados = {
+    verificacaoEmail: false,
+    verificacaoNome: false
+  }
+
+
+  db('usuarios').whereNot('id', req.query.id).then(data => data.forEach(element => {
+
+
+
+    if (element['email'] == req.query.email) {
+      dados['verificacaoEmail'] = true
+    }
+    if (element['nome'] == req.query.nome) {
+      dados['verificacaoNome'] = true
+    }
+
+  })).then(() => res.status(200).send(JSON.stringify(dados)))
+    .catch(e => {
+      console.log('Erro:', e.message);
+    })
+
+
+})
+
 app.put('/meusdados', (req, res) => {
 
   db('usuarios').where('email', '=', req.body.email).update(req.body)
     .then(data => res.status(200).send(JSON.stringify(data)))
+
+})
+
+app.delete('/meusdados', (req, res) => {
+
+  db('usuarios').delete().where('email', '=', req.body.email)
+    .then(data => res.send('Usuario excluido com sucesso'))
+    .catch(e => {
+      console.log('Erro:', e.message);
+    })
 
 })
 

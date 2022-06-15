@@ -11,9 +11,24 @@
   <script src="./javaspripts/jquery.js"></script>
 </head>
 
-<body>
+<body class="bg-success">
   <div id="container" class="container">
-    <h1>Meus Dados</h1>
+    <nav class=" p-1 mb-2 bg-light">
+      <ol class="breadcrumb ">
+        <li class="breadcrumb-item">
+          <a href="./index.html">Home</a>
+        </li>
+        <li class="breadcrumb-item">
+          <a href="./login.html">Login</a>
+        </li>
+        <li class="breadcrumb-item active">Meus Dados</li>
+      </ol>
+    </nav>
+    <div class="jumbotron p-3 mb-2 bg-light">
+      <h1 class="display-4">Meus Dados</h1>
+      <p class="lead m-1 mb-2">Edite o seus dados abaixo e click em alterar.</p>
+      <button type="button" id="excluir" class="btn btn-danger">Excluir Conta</button>
+    </div>
 
     <form class="row g-3">
       <div class="col-12">
@@ -31,7 +46,7 @@
 
       <div class="col-6">
         <label for="inputAddress2" class="form-label">CPF</label>
-        <input type="text" class="form-control" id="CPF" placeholder="Seu cpf">
+        <input type="text" class="form-control cpf-mask" id="CPF" placeholder="Seu cpf">
       </div>
       <div class="col-md-6">
         <label for="data">Data de aniversario</label>
@@ -51,5 +66,9 @@
   </div>
 </body>
 <script src="./javaspripts/meusdados.js"></script>
+
+<script type="text/javascript" src="//code.jquery.com/jquery-2.0.3.min.js"></script>
+<script type="text/javascript" src="//assets.locaweb.com.br/locastyle/2.0.6/javascripts/locastyle.js"></script>
+<script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
 
 </html>
