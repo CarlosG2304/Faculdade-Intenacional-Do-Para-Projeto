@@ -43,19 +43,31 @@ $('form').submit(function (e) {
 
     if (boolean) {
 
-      alert('Usuario ja cadastrado')
+      swal({
+        title: "Ja cadastrado!",
+        text: "Usuario ja cadastrado",
+        icon: "warning",
+      });
 
     } else {
       if (senha !== confimacaoS) {
-        alert("Senhas diferentes")
+        $('.alert').css('display', 'block')
 
       } else {
         salvar()
-        alert("Cadastro realizado com sucesso")
-        $('body').fadeOut(2000)
-        setTimeout(function () {
-          window.location.replace("/index.html");
-        }, 2000)
+        swal({
+          title: "Sucesso!",
+          text: "Cadastro realizado com sucesso!",
+          icon: "success",
+        });
+        localStorage.setItem('email', email)
+        $('.swal-button--confirm').click(function () {
+          $('body').fadeOut(2000)
+          setTimeout(function () {
+            window.location.replace("/index.html");
+          }, 2000)
+        })
+
 
       }
     }

@@ -61,7 +61,11 @@ $('#alterar').click(function (e) {
 
     if (boolean) {
 
-      alert('Usuario ja cadastrado')
+      swal({
+        title: "Ja cadastrado!",
+        text: "Usuario ja cadastrado",
+        icon: "warning",
+      });
 
     } else {
       $.ajax({
@@ -75,7 +79,11 @@ $('#alterar').click(function (e) {
           senha
         },
         success(data) {
-          alert(`Alteração feita com sucesso`)
+          swal({
+            title: "Sucesso!",
+            text: "Alteração feita com sucesso",
+            icon: "success",
+          });
         },
         error(e) {
           console.log('post', e)
@@ -96,24 +104,41 @@ $('#Sair').click(function () {
 $('#excluir').click(function () {
 
   const email = $('#email').val()
+  swal({
+    title: "Confimação",
+    text: "Tem certeza que deseja excluir a sua conta?",
+    icon: "warning",
+    buttons: ["Não", "Sim"],
+  });
 
-  $.ajax({
-    url: 'meusdados',
-    method: 'delete',
-    data: {
-      email
-    },
-    success(data) {
-      alert(data)
-      localStorage.setItem('email', '')
-      $('body').fadeOut(2000)
-      setTimeout(function () {
-        window.location.replace("/index.html");
-      }, 2000)
-    },
-    error(e) {
-      console.log('post', e)
-    },
+  $('.swal-button--confirm').click(function () {
+    $.ajax({
+      url: 'meusdados',
+      method: 'delete',
+      data: {
+        email
+      },
+      success(data) {
+        swal({
+          title: "Sucesso!",
+          text: data,
+          icon: "success",
+        });
+
+        localStorage.setItem('email', '')
+        $('.swal-button--confirm').click(function () {
+          $('body').fadeOut(2000)
+          setTimeout(function () {
+            window.location.replace("/index.html");
+          }, 2000)
+        })
+      },
+      error(e) {
+        console.log('post', e)
+      },
+    })
+
   })
+
 
 })

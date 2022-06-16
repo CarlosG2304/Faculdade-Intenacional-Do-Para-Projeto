@@ -23,14 +23,21 @@ $('form').submit(function (e) {
     let boolean = dado['verificacaoEmail'] && dado['verificacaoSenha']
 
     if (boolean) {
-      alert('Bem vindo')
+      swal({
+        title: "Ola!",
+        text: "Seja bem vindo",
+        icon: "success",
+      });
       localStorage.setItem('email', email)
-      $('body').fadeOut(2000)
-      setTimeout(function () {
-        window.location.replace("/MeusDados.html");
-      }, 2000)
+      $('.swal-button--confirm').click(function () {
+        $('body').fadeOut(2000)
+        setTimeout(function () {
+          window.location.replace("/MeusDados.html");
+        }, 2000);
+      })
+
     } else {
-      alert('Email e/ou senha incorreta')
+      $('.alert').css('display', 'block')
     }
   }
   e.preventDefault()

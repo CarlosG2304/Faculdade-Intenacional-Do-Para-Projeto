@@ -1,0 +1,74 @@
+.curso{     /* SESSÃO QUE POSSUI OS CURSOS DE AMOSTRA TELA PRINCIPAL */
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    padding-top: 10px;
+}
+.area{
+    margin-top: 10px;
+}
+
+h1{
+    text-align: center;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+   
+}
+
+.card{
+    width: 300px;
+    height: 400px;
+    background-color: hsl(190, 50%, 30%);
+    border-radius: 15px;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+.foto{
+    width: 150px;
+    height: 150px;
+    border-radius: 30%;
+    margin-top: 20px;
+}
+
+.text-main{
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    color: white;
+
+}
+
+.lorem{
+    margin-top: 20px;
+    color: white;
+    font-weight: 200;
+}
+
+.container .btn{
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 40px;
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: none;
+    transition: 1s;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+
+.btn-green:hover{
+    background: deepskyblue;
+    color: white;
+    box-shadow:aquamarine;
+}
+
+.btn-green:active{
+    position: relative;
+    top: 5px;
+}

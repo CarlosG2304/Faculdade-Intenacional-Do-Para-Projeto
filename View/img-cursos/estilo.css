@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&display=swap');
+/* import fonts do projeto */
+
+:root{
+    --main: snow; /* demais cores utilizadas */
+    --bg: hsl(180, 50%, 30%);/* cor de fundo fonts do projeto */
+    --bg-accent: black; /* demais cores utilizadas */
+    --font-color: hsl(180, 80%, 40%); /* demais cores utilizadas */
+}
+
+* {
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.area{
+    color: white;
+}
+
+.wrapper{ /* CONFIGURAÇÕES DE BORDA 85% DA TELA UTILIZADA */
+    width: 85%;
+    margin: auto;
+}
+
+a {
+    color: snow;
+}
+
+body { /* COR DE FUNDO */
+    background: var(--bg);
+}
+
+.wrapper{ /* CONFIGURAÇÕES DE BORDA 90% DA TELA UTILIZADA */
+    width: 85%;
+    margin: auto;
+}
+
+header { /* CINFIGURAÇÕES CABEÇALHO - - ESTILO */
+    display: flex;
+    justify-content: space-between;
+    height: 85px;
+    align-items: center;
+}
+
+header h3 { /* CINFIGURAÇÕES CABEÇALHO - - ESTILO */
+    font-size: 1.5rem;
+    color: snow;
+}
+
+header ul { /* CINFIGURAÇÕES CABEÇALHO - - ESTILO */
+    display: flex;
+    align-items: center;
+}
+
+header li{ /* CINFIGURAÇÕES CABEÇALHO - - ESTILO */
+    margin-left: 1rem;
+}
+
+header li a{  /* CINFIGURAÇÕES CABEÇALHO - - ESTILO */
+    font-size: .85rem;
+}
+
+header li:last-child a { /* CINFIGURAÇÕES CABEÇALHO - - ESTILO */
+    border: 3px solid deepskyblue;
+    color: var(--main);
+    text-transform: uppercase;
+    padding:  .25rem 1rem;
+    border-radius: 5px;
+}
+
+header h3 small{ /* CINFIGURAÇÕES CABEÇALHO - - ESTILO */
+    color: deepskyblue;
+    font-size: .8rem;
+}
+
+header li:last-child a span{ /* CINFIGURAÇÕES CABEÇALHO - - ESTILO */
+    margin-right: .4rem;
+}
+
+.hero{ /* AREA CENTRAL - TEXTO CENTRAL  - ESTILO */
+    min-height: 85vh;
+    position: absolute;
+    top: 0%;
+    left: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.texto{ /* AREA CENTRAL - TEXTO CENTRAL  - ESTILO */
+    z-index: 1;
+}
+
+.hero h1{ /* AREA CENTRAL - TEXTO CENTRAL  - ESTILO */
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: var(--main);
+    font-weight: 400;
+    font-size: 3rem;
+    line-height: 5rem;
+    margin-bottom: 2rem;
+}
+
+.hero a { /* AREA CENTRAL - TEXTO CENTRAL  - ESTILO */
+    display: inline;
+    border: 3px solid deepskyblue;
+    color: snow;
+    padding: .35rem 1rem;
+    font-size: .85rem;
+    text-transform: uppercase;
+    border-radius: 5px; 
+    margin-left: 40px; 
+}
+
+.hero a span{ /* AREA CENTRAL - TEXTO CENTRAL  - ESTILO */
+    font-size: 1.1rem;
+}
+
+
+.pagina-divide{ /* LINHA de divisão das sessões */
+    height: 80px;
+    display: grid;
+    place-items: center;
+    position: relative;
+    margin: 4rem 0rem;
+}
+
+.divide{ /* LINHA barra de divisão das sessões */
+    width: 5px;
+    height: 80px;
+    background: deepskyblue;
+}
+.divide-linha{ /* LINHA barra de divisão das sessões */
+    position: absolute;
+    width: 49%;
+    border-bottom: 1px ridge deepskyblue;
+}
+
+.divide-linha.left{ /* LINHA barra de divisão das sessões */
+    left: 0;
+}
+
+.divide-linha.right{ /* LINHA barra de divisão das sessões */
+    right: 0;
+}
+
+
+
+/* sessões que possui as barras de progresso */
+
+.pesquisa{     /* SESSÃO QUE POSSUI OS CURSOS DE AMOSTRA TELA PRINCIPAL */
+    width: 90%; /* SESSÃO QUE POSSUI OS CURSOS DE AMOSTRA TELA PRINCIPAL */
+    margin: auto; 
+    text-align: center;
+    padding-top: 5px;
+}
+
+
+.row-1{ /* SESSÃO QUE POSSUI OS CURSOS DE AMOSTRA TELA PRINCIPAL */
+    margin-top: 15%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.skill-wrapper { /* SESSÃO QUE CONTEM AS BARRAS DE PROGRESSOS */
+    width: 85%;
+    display: grid;
+    max-width: 800px;
+    margin: auto;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    margin-bottom: 3rem;
+
+}
+
+.percircle { /* SESSÃO QUE CONTEM AS BARRAS DE PROGRESSOS */
+    background: snow;
+}
+
+.percircle span :first-child { /* SESSÃO QUE CONTEM AS BARRAS DE PROGRESSOS */
+    font-weight: 600 !important;
+}
+
+.percircle:after { /* SESSÃO QUE CONTEM AS BARRAS DE PROGRESSOS */
+    background-color: hsl(180, 50%, 30%);
+}
+
+.skill { /* SESSÃO QUE CONTEM AS BARRAS DE PROGRESSOS */
+    display: block;
+}
+
+.skill p { /* SESSÃO QUE CONTEM AS BARRAS DE PROGRESSOS */
+    color: white;
+    font-size: 20px;
+    text-align: left;
+    clear: both;
+    padding-left: 1rem;
+    padding-top: .5rem;
+}
+
+
+/* sessões que possui os cursos para pesquisa */
+.row{ /* SESSÃO QUE POSSUI OS CURSOS DE AMOSTRA TELA PRINCIPAL */
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* CONTATOS */
+
+.contato{
+    margin: 100px auto;
+    width: 80%;
+    background-image: linear-gradient(rgba(53, 57, 73, 0.7), rgba(4, 9, 30, 0.7)), url(img/banner2.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 0;
+    border: white;  
+}
+
+.contato h1{
+    color: white;
+    margin-bottom: 40px;
+    padding: 0;
+}
+
+/* RODAPÉ */
+.rodape{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.rodape h4{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+.hero-btn{ /* SESSÃO QUE POSSUI OS CURSOS DE AMOSTRA TELA PRINCIPAL */
+    color: deepskyblue;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.hero-btn:hover{ /* SESSÃO QUE POSSUI OS CURSOS DE AMOSTRA TELA PRINCIPAL */
+    background: var(--main);
+    color: deepskyblue;
+
+}
+
+.hero-btn:active{ /* SESSÃO QUE POSSUI OS CURSOS DE AMOSTRA TELA PRINCIPAL */
+    position: relative;
+    top: 5px;
+
+}
+
+.icons .fa{
+    color: deepskyblue;
+    margin: 0 5px;
+    cursor: pointer;
+    padding: 30px;
+}
+
+.lazer{ /* classe facilitadores */
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    padding-top: 10px;
+
+}
+
+h1{
+    font-family: 'poppins', sans-serif;
+    font-size: 30px;
+    color: white;
+}
+
+p{
+    font-size: 14px;
+}
+
+.lazer-coluna{
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+}
+
+.lazer-coluna img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.lazer-coluna p{
+    color: white;
+    padding: 0;
+}
+
+.lazer-coluna h3{
+    color: deepskyblue;
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+  

@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&display=swap');
+/* import fonts do projeto */
+
+:root{
+    --main: snow; /* demais cores utilizadas */
+    --bg: hsl(180, 50%, 30%);/* cor de fundo fonts do projeto */
+    --bg-accent: black; /* demais cores utilizadas */
+    --font-color: hsl(180, 80%, 40%); /* demais cores utilizadas */
+}
+
+* {
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.relatos{ /* estilo dos relatos */
+    width: 85%;
+    margin: auto;
+    padding-top: 60px;
+    text-align: center;
+}
+
+.relatos-coluna{ /* estilo do paragrafo dos relatos */
+    flex-basis: 44%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+    background: #fff3f3;
+    padding: 25px;
+    display: flex;
+}
+
+.relatos-coluna .fotos{ /* estilo das imagens relatos */
+    height: 40px;
+    margin-left: 5px;
+    margin-right: 30px;
+    border-radius: 50%;
+}
+
+.relatos-coluna p{
+    font-size: 14px;
+    padding: 0;
+}
+
+.relatos-coluna h3{
+    margin-top: 10px;
+    text-align: left;
+}
+
+.estrelas .fa{
+    color: deepskyblue;
+}
+
+.relatos-coluna p{ /* SESSÕES DE RELATOS */
+    color: black;
+    padding: 0;
+}
+
