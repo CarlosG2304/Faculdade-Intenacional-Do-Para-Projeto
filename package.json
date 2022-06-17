@@ -4,8 +4,7 @@
   "description": "",
   "main": "express.js",
   "scripts": {
-    "start": "node Controller/express.js",
-    "production": "pm2 start Controller/express.js --name projetofip-backend"
+    "start": "pm2 start Controller/express.js --name projetofip-backend"
   },
   "author": "Carlos Gabriel",
   "license": "ISC",
