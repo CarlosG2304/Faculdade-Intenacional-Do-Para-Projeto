@@ -1,6 +1,5 @@
 const bodyParser = require('body-parser')
 const express = require('express')
-const { data } = require('jquery')
 const app = express()
 const db = require('../Model/database')
 const mail = require('./mail')

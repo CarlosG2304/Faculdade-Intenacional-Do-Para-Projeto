@@ -4,7 +4,8 @@
   "description": "",
   "main": "express.js",
   "scripts": {
-    "start": "node Controller/express.js"
+    "start": "node Controller/express.js",
+    "production": "pm2 start Controller/express.js --name projetofip-backend"
   },
   "author": "Carlos Gabriel",
   "license": "ISC",
@@ -16,6 +17,7 @@
     "knex": "^2.1.0",
     "mysql2": "^2.3.3",
     "nodemailer": "^6.7.5",
-    "nodemon": "^2.0.16"
+    "nodemon": "^2.0.16",
+    "pm2": "^5.2.0"
   }
 }
