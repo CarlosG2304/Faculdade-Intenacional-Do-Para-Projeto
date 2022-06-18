@@ -9,7 +9,7 @@
    left: 0;
    bottom: 0;
    z-index: 1;
-   background-color: #070705;
+   background-color: #07070574;
    display: none;
 } 
 li{
@@ -51,8 +51,7 @@ header l1 a{
    
     background-color: transparent;
 
-    background-image: url("../imgs/bars.png");
-    padding: 12px;
+    background-image: url("../imgs/menu-aberto.png");
     z-index: 2;
     outline: none;
   }
