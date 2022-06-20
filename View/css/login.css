@@ -58,6 +58,7 @@ body{
     margin-bottom: 1rem;
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
 }
 
 
@@ -83,6 +84,7 @@ body{
   padding: 0.4rem 1rem;
   border-radius: 5px;
   cursor: pointer;
+  margin-top: 1%;
 }
 
 .cadastro-button button:hover{
@@ -93,6 +95,7 @@ body{
   text-decoration: none;
   font-weight: 500;
   font-weight: #fff;
+  color: white;
 }
 
 .input-group{
