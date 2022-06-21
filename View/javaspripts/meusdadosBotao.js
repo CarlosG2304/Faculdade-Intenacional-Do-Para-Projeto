@@ -9,8 +9,8 @@ $('.js-redirect').click(function (e) {
   }
 })
 if (email) {
-  $('.borda-sair').css('display', 'flex')
+  $('.botao-sair').css('display', 'flex')
 } else {
-  $('.borda-sair').css('display', 'none')
+  $('.botao-sair').css('display', 'none')
 }
 
