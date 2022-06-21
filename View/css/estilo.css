@@ -35,7 +35,7 @@ body { /* COR DE FUNDO */
 }
 
 .wrapper{ /* CONFIGURAÇÕES DE BORDA 90% DA TELA UTILIZADA */
-    width: 85%;
+    width: 90%;
     margin: auto;
 }
 
@@ -64,14 +64,29 @@ header li a{  /* CINFIGURAÇÕES CABEÇALHO - - ESTILO */
     font-size: .85rem;
 }
 
-header li:last-child a { /* CINFIGURAÇÕES CABEÇALHO - - ESTILO */
+.botao-dados{ /* CINFIGURAÇÕES CABEÇALHO - - ESTILO */
     border: 3px solid deepskyblue;
     color: var(--main);
     text-transform: uppercase;
     padding:  .25rem 1rem;
     border-radius: 5px;
 }
-
+.botao-dados:hover{ /* CINFIGURAÇÕES CABEÇALHO - - ESTILO */
+    background-color: deepskyblue;
+    transition: 3s;
+}
+.botao-sair{ /* CINFIGURAÇÕES CABEÇALHO - - ESTILO */
+    border: 3px solid red;
+    color: var(--main);
+    text-transform: uppercase;
+    padding:  .25rem 1rem;
+    border-radius: 5px;
+    display: none;
+}
+.botao-sair:hover{ /* CINFIGURAÇÕES CABEÇALHO - - ESTILO */
+    background-color: red;
+    transition: 3s;
+}
 header h3 small{ /* CINFIGURAÇÕES CABEÇALHO - - ESTILO */
     color: deepskyblue;
     font-size: .8rem;

@@ -1,5 +1,6 @@
+const email = localStorage.getItem('email')
+
 $('.js-redirect').click(function (e) {
-  const email = localStorage.getItem('email')
   e.preventDefault()
   if (email) {
     window.location.replace("/MeusDados.html");
@@ -7,4 +8,9 @@ $('.js-redirect').click(function (e) {
     window.location.replace("/login.html");
   }
 })
+if (email) {
+  $('.borda-sair').css('display', 'flex')
+} else {
+  $('.borda-sair').css('display', 'none')
+}
 
