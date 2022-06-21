@@ -42,7 +42,6 @@ body { /* COR DE FUNDO */
 
 header { /* CINFIGURAÇÕES CABEÇALHO - - ESTILO */
     display: flex;
-    justify-content: space-between;
     height: 85px;
     align-items: center;
 }
@@ -50,6 +49,7 @@ header { /* CINFIGURAÇÕES CABEÇALHO - - ESTILO */
 header h3 { /* CINFIGURAÇÕES CABEÇALHO - - ESTILO */
     font-size: 1.5rem;
     color: snow;
+    margin: 10%;
 }
 
 header ul { /* CINFIGURAÇÕES CABEÇALHO - - ESTILO */
