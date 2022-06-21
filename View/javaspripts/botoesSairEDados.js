@@ -8,9 +8,19 @@ $('.js-redirect').click(function (e) {
     window.location.replace("/login.html");
   }
 })
+
+
 if (email) {
   $('.botao-sair').css('display', 'flex')
-} else {
-  $('.botao-sair').css('display', 'none')
+  $('.botao-sair').show()
+
 }
+
+$('.botao-sair').click(function (e) {
+  localStorage.setItem('email', '')
+  $('.botao-sair').hide(3000)
+  setTimeout(function () {
+    $('.botao-sair').css('display', 'none')
+  }, 2500)
+})
 
