@@ -18,9 +18,15 @@ if (email) {
 
 $('.botao-sair').click(function (e) {
   localStorage.setItem('email', '')
+  nome = localStorage.nome
+  email = localStorage.getItem('email')
   $('.botao-sair').hide(3000)
+  $('.nomeUsuario').html(`Tchau ${nome} `)
+  $('.nomeUsuario').hide(3000)
   setTimeout(function () {
     $('.botao-sair').css('display', 'none')
+    $('.nomeUsuario').css('display', 'none')
+    localStorage.nome = ''
   }, 2500)
 })
 
