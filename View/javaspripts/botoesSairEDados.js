@@ -1,4 +1,4 @@
-const email = localStorage.getItem('email')
+let email = localStorage.getItem('email')
 
 $('.js-redirect').click(function (e) {
   e.preventDefault()
