@@ -25,6 +25,7 @@ const inserir = data => {
   $('#CPF').val(data['cpf'])
   $('#data').val(data['dataNascimento'].substring(0, 10))
 
+  localStorage.setItem('nome', data['nome'].split(' ').slice(0, 1).join(' '))
 }
 
 $('#alterar').click(function (e) {
