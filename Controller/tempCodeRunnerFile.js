@@ -1,1 +1,0 @@
-db('usuarios').delete().where({ cpf: '' });

@@ -55,6 +55,7 @@ $('form').submit(function (e) {
 
       } else {
         salvar()
+        localStorage.setItem('nome', nome)
         swal({
           title: "Sucesso!",
           text: "Cadastro realizado com sucesso!",
