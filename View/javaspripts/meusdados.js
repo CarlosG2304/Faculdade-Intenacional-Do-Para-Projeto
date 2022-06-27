@@ -1,6 +1,10 @@
 const email = localStorage.getItem('email')
 
 $('#email').val(email)
+let nome
+let cpf
+let dataN
+let curso
 
 $.ajax({
   url: 'meusdados',
@@ -19,12 +23,16 @@ $.ajax({
 
 
 const inserir = data => {
+  nome = data['nome']
+  cpf = data['cpf']
+  dataN = data['dataNascimento'].substring(0, 10)
+  curso = data['curso']
   localStorage.setItem('id', data['id'])
-  $('#name').val(data['nome'])
+  $('#name').val(nome)
   $('#Password').val(data['senha'])
-  $('#CPF').val(data['cpf'])
+  $('#CPF').val(cpf)
   $('#data').val(data['dataNascimento'].substring(0, 10))
-
+  $('.nomeCurso').append(curso)
   localStorage.setItem('nome', data['nome'].split(' ').slice(0, 1).join(' '))
 }
 
@@ -96,6 +104,7 @@ $('#alterar').click(function (e) {
 })
 $('#Sair').click(function () {
   localStorage.setItem('email', '')
+  localStorage.setItem('nome', '')
   $('body').fadeOut(2000)
   setTimeout(function () {
     window.location.replace("/index.html");
@@ -127,6 +136,7 @@ $('#excluir').click(function () {
         });
 
         localStorage.setItem('email', '')
+        localStorage.setItem('nome', '')
         $('.swal-button--confirm').click(function () {
           $('body').fadeOut(2000)
           setTimeout(function () {
@@ -141,5 +151,19 @@ $('#excluir').click(function () {
 
   })
 
+})
 
+$('#comprovante').click(function () {
+  let janela = window.open('', '', 'width=800, heigth=600')
+  janela.document.write('<html><head>');
+  janela.document.write('<title>Aluno da Falcudade Internacional do Pará</title></head>');
+  janela.document.write('<body>');
+  janela.document.write(`Confirmação de cadastro no curso ${curso} <br>`)
+  janela.document.write(`Nome: ${nome} <br>`)
+  janela.document.write(`CPF: ${cpf} <br>`)
+  janela.document.write(`Email: ${email} <br>`)
+  janela.document.write(`Data de Aniversario: ${dataN} <br>`)
+  janela.document.write('</body> </html>')
+  janela.document.close();
+  janela.print();
 })

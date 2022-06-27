@@ -1,7 +1,7 @@
 $.ajax({ url: 'autenticacao', success(data) { } })
 
 $('form').submit(function (e) {
-  const email = $('#email').val()
+  const email = $('#email').val().trim()
   const senha = $('#password').val()
 
   $.ajax({

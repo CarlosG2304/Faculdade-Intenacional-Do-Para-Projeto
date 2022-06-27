@@ -6,7 +6,7 @@ $('form').submit(function (e) {
   const data = $('#data').val()
   const cpf = $('#cpf').val()
   const curso = $('.form-select').val()
-  const email = $('#email').val()
+  const email = $('#email').val().trim()
   const senha = $('#password').val()
   const confimacaoS = $('#Confirmpassword').val()
 
@@ -55,19 +55,41 @@ $('form').submit(function (e) {
 
       } else {
         salvar()
-        localStorage.setItem('nome', nome)
+        localStorage.setItem('nome', nome.split(' ').slice(0, 1).join(' ').trim())
+        localStorage.setItem('email', email)
         swal({
           title: "Sucesso!",
           text: "Cadastro realizado com sucesso!",
           icon: "success",
+          buttons: {
+            comprovante: 'Comprovante',
+            Ok: 'Ok'
+          }
+        }).then((value) => {
+          switch (value) {
+            case 'Ok':
+              $('body').fadeOut(2000)
+              setTimeout(function () {
+                window.location.replace("/index.html");
+              }, 2000)
+              break;
+            case 'comprovante':
+              let janela = window.open('', '', 'width=800, heigth=600')
+              janela.document.write('<html><head>');
+              janela.document.write('<title>Aluno da Falcudade Internacional do Pará</title></head>');
+              janela.document.write('<body>');
+              janela.document.write(`Confirmação de cadastro no curso ${curso} <br>`)
+              janela.document.write(`Nome: ${nome} <br>`)
+              janela.document.write(`CPF: ${cpf} <br>`)
+              janela.document.write(`Email: ${email} <br>`)
+              janela.document.write(`Data de Aniversario: ${data} <br>`)
+              janela.document.write('</body> </html>')
+              janela.document.close();
+              janela.print();
+              break;
+          }
         });
-        localStorage.setItem('email', email)
-        $('.swal-button--confirm').click(function () {
-          $('body').fadeOut(2000)
-          setTimeout(function () {
-            window.location.replace("/index.html");
-          }, 2000)
-        })
+
 
 
       }
@@ -98,3 +120,5 @@ $('form').submit(function (e) {
   e.preventDefault()
 
 })
+
+

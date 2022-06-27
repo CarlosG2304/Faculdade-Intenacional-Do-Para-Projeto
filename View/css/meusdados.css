@@ -9,3 +9,8 @@ h1{
 label{
   color: white;
 }
+h2{
+  position: absolute;
+  top: 15%;
+  right: 15%;
+}

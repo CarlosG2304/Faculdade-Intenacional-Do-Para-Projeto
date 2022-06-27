@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
 
-  <title>Meus Dados</title>
+  <title>FIP Meus Dados</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
   <link rel="stylesheet" href="./css/meusdados.css">
@@ -28,7 +28,9 @@
 
     <div class="jumbotron p-3 mb-2 bg-light">
       <h1 class="display-4">Meus Dados</h1>
-      <p class="lead m-1 mb-2">Edite o seus dados abaixo e click em alterar.</p>
+      <p class="lead m-1 mb-2">Edite o seus dados abaixo e click em salvar.</p>
+      <button type="button" id="comprovante" class="btn btn-info">Comprovante</button>
+      <h2 class="nomeCurso text-info"></h2>
     </div>
 
     <form class="row g-3">
@@ -56,11 +58,8 @@
 
       <div class="flex-row">
 
-        <button id="alterar" class="btn btn-primary">Alterar</button>
-
+        <button id="alterar" class="btn btn-primary">Salvar</button>
         <button type="button" id="Sair" class="btn btn-primary ms-3">Sair</button>
-
-
         <button type="button" id="excluir" class="btn btn-danger ms-3">Excluir Conta</button>
       </div>
     </form>

@@ -13,7 +13,7 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #0c0ce94d;
+  background-color: #229c9c;
 }
 
 .container {
@@ -62,17 +62,6 @@ body{
 }
 
 
-
-.form-header h1::after {
-  content: '';
-  display: block;
-  width: 5rem;
-  height: 0.3rem;
-  background-color: #6c63ff;
-  margin: 0 auto;
-  position: absolute;
-  border-radius: 10px;
-}
 .login-button{
   display: flex;
   align-items: center;
@@ -80,11 +69,13 @@ body{
 
 .cadastro-button button{
   border: none;
-  background-color: #6c63ff;
+  background-color: #229c9c;
   padding: 0.4rem 1rem;
   border-radius: 5px;
   cursor: pointer;
-  margin-top: 1%;
+  margin-top: 2%;
+  width: 49%;
+  height: auto;
 }
 
 .cadastro-button button:hover{
@@ -144,10 +135,11 @@ body{
   width: 100%;
   margin-top: 2rem;
   border: none;
-  background-color: #6c63ff;
+  background-color: #229c9c;
   padding: 0.63rem;
   border-radius: 5px;
   cursor: pointer;
+  height: auto;
 }
 
 .continue-buttom button:hover{

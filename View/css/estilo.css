@@ -80,7 +80,7 @@ header li a{  /* CINFIGURAÇÕES CABEÇALHO - - ESTILO */
 }
 .botao-dados:hover{ /* CINFIGURAÇÕES CABEÇALHO - - ESTILO */
     background-color: deepskyblue;
-    transition: 3s;
+    transition: 2s;
 }
 .botao-sair{ /* CINFIGURAÇÕES CABEÇALHO - - ESTILO */
     border: 3px solid red;
@@ -117,6 +117,8 @@ header li:last-child a span{ /* CINFIGURAÇÕES CABEÇALHO - - ESTILO */
     z-index: 1;
 }
 
+
+
 .hero h1{ /* AREA CENTRAL - TEXTO CENTRAL  - ESTILO */
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: var(--main);
@@ -133,12 +135,17 @@ header li:last-child a span{ /* CINFIGURAÇÕES CABEÇALHO - - ESTILO */
     padding: .35rem 1rem;
     font-size: .85rem;
     text-transform: uppercase;
-    border-radius: 5px; 
+    border-radius: 5px;
     margin-left: 40px; 
 }
 
 .hero a span{ /* AREA CENTRAL - TEXTO CENTRAL  - ESTILO */
     font-size: 1.1rem;
+}
+
+.hero a:hover{
+    background-color: deepskyblue;
+    transition: 2s;
 }
 
 
@@ -151,7 +158,7 @@ header li:last-child a span{ /* CINFIGURAÇÕES CABEÇALHO - - ESTILO */
 }
 
 .divide{ /* LINHA barra de divisão das sessões */
-    width: 5px;
+    width: 4px;
     height: 80px;
     background: deepskyblue;
 }
@@ -182,7 +189,7 @@ header li:last-child a span{ /* CINFIGURAÇÕES CABEÇALHO - - ESTILO */
 
 
 .row-1{ /* SESSÃO QUE POSSUI OS CURSOS DE AMOSTRA TELA PRINCIPAL */
-    margin-top: 15%;
+    margin-top: 10%;
     display: flex;
     justify-content: space-between;
 }
@@ -238,7 +245,7 @@ header li:last-child a span{ /* CINFIGURAÇÕES CABEÇALHO - - ESTILO */
 .contato{
     margin: 100px auto;
     width: 80%;
-    background-image: linear-gradient(rgba(53, 57, 73, 0.7), rgba(4, 9, 30, 0.7)), url(img/banner2.jpg);
+    background-image: linear-gradient(rgba(53, 57, 73, 0.7), rgba(4, 9, 30, 0.7)), url(../imgs/banner2.jpg);
     background-position: center;
     background-size: cover;
     border-radius: 10px;
@@ -268,6 +275,10 @@ header li:last-child a span{ /* CINFIGURAÇÕES CABEÇALHO - - ESTILO */
     font-weight: 600;
 }
 
+.rodape p{
+    color: white;
+}
+
 .hero-btn{ /* SESSÃO QUE POSSUI OS CURSOS DE AMOSTRA TELA PRINCIPAL */
     color: deepskyblue;
     font-size: 14px;
@@ -292,7 +303,7 @@ header li:last-child a span{ /* CINFIGURAÇÕES CABEÇALHO - - ESTILO */
 }
 
 .icons .fa{
-    color: deepskyblue;
+    color: black;
     margin: 0 5px;
     cursor: pointer;
     padding: 30px;

@@ -5,8 +5,44 @@
     padding-top: 5px;
 }
 
-h2{
-    padding-top: 20px;
-    text-align: center;
+.container-01{
+    padding: 20px;
+    display: list-item;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card-05{
+    width: 350;
+    margin: 25px;
+    padding: 50px 50px;
+    background-color: rgb(29, 77, 77); /* rgb(65, 158, 158 */
+    position: relative;
+    transition: all 0.25s ease-in-out;
+    border-radius: 10px;
+}
+
+.card_icon h3{
+    color: deepskyblue;
+}
+
+.card-05 .card_icon{
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.card-05 .card_icon img{
+    margin-top: 15px;
+    height: 100px;
+}
+
+.card-05 ul li{
+    margin-top: 3px;
+    list-style: none;
+    padding: 3px 0;
     color: white;
+    font-size: 16px;
+    font-weight: 300;
+    opacity: 0.7;
 }

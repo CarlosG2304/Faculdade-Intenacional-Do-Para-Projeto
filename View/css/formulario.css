@@ -20,7 +20,7 @@ body{
   width: 80%;
   height: 80vh;
   display: flex;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, .212);
+  box-shadow: 10px 10px 10px hsl(180, 80%, 40%);
 }
 
 .form-image {
@@ -68,8 +68,10 @@ body{
 }
 
 .login-button button{
+  margin: 1%;
+  width: 50%;
   border: none;
-  background-color: #6c63ff;
+  background-color: hsl(180, 80%, 40%);
   padding: 0.4rem 1rem;
   border-radius: 5px;
   cursor: pointer;
@@ -89,9 +91,8 @@ body{
 .form-header h1::after {
   content: '';
   display: block;
-  width: 5rem;
   height: 0.3rem;
-  background-color: #6c63ff;
+  background-color: hsl(180, 80%, 40%);
   margin: 0 auto;
   position: absolute;
   border-radius: 10px;
@@ -163,7 +164,7 @@ padding: 0 0.5rem;
   width: 100%;
   margin-top: 2rem;
   border: none;
-  background-color: #6c63ff;
+  background-color: hsl(180, 80%, 40%);
   padding: 0.63rem;
   border-radius: 5px;
   cursor: pointer;

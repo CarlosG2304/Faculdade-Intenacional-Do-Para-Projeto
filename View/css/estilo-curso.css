@@ -56,16 +56,24 @@ h1{
     border-radius: 10px;
     border: none;
     transition: 1s;
-    background-color: white;
+    background-color: rgb(129, 175, 179);
     color: black;
     cursor: pointer;
 }
-
+.btn .btn-green{
+    font-family: 'Courier New', Courier, monospace;
+}
 
 .btn-green:hover{
     background: deepskyblue;
     color: white;
     box-shadow:aquamarine;
+}
+
+.btn-green a{
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
 }
 
 .btn-green:active{
