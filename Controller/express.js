@@ -2,7 +2,6 @@ const bodyParser = require('body-parser')
 const express = require('express')
 const app = express()
 const db = require('../Model/database')
-const mail = require('./mail')
 app.use(express.static('View'))
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
@@ -10,10 +9,6 @@ app.use(bodyParser.json())
 const porta = process.env.PORT || 8080
 
 
-
-app.post('/envio', (req, res) => {
-  mail(req.body.email, res)
-})
 
 app.get('/meusdados', (req, res) => {
 
