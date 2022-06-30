@@ -1,4 +1,4 @@
-# Faculdade-Intenacional-Do-Para-Projeto
+# Faculdade Intenacional Do Para
 Projeto de Engenahria de Sotftare da Faculdade
 
 Com Express e Knex no back-end
