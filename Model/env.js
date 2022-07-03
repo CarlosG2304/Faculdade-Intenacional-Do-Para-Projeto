@@ -4,7 +4,7 @@ module.exports = env = {
     port: 3306,
     user: process.env.MYSQL_USER,
     password: process.env.MYSQL_PASSWORD,
-    database: 'gpsp0t0xspo6xwob'
+    database: MYSQL_DATABASE
   }
 
 
