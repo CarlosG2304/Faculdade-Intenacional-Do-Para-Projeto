@@ -1,4 +1,4 @@
-# Faculdade Intenacional Do Para
+# Faculdade Intenacional Do Pará
 
 ## Projeto de Engenahria de Sotftare da Faculdade
 
