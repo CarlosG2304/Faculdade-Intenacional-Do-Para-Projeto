@@ -11,7 +11,7 @@ app.use(express.static('View'))
 app.use(bodyParser.json())
 
 var corsOptions = {
-  origin: 'https://tracaja.web.app',
+  origin: '/',
   optionsSuccessStatus: 200
 }
 
@@ -45,7 +45,7 @@ async function enviar(req, res) {
     console.log(envio)
   } catch (e) {
     res.status(500).send("Erro")
-    console.log("ERRO ", e.message)
+    console.log("ERRO ", e)
   }
 }
 app.post('/enviarEmail', (req, res) => {
