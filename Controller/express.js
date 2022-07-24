@@ -1,5 +1,5 @@
-const bodyParser = require('body-parser')
 const express = require('express')
+const bodyParser = require('body-parser')
 const nodemailer = require('nodemailer')
 const cors = require('cors');
 const db = require('../Model/database');
@@ -7,60 +7,49 @@ const app = express();
 
 
 app.use(express.static('View'))
-app.use(bodyParser.urlencoded({ extended: true }))
+
 app.use(bodyParser.json())
-
-const porta = process.env.PORT || 8080
-
-
-
-
 
 var corsOptions = {
   orgim: '/',
   optionsSuccessStatus: 200
 }
 
-app.use(express.static('dist/tracaja'))
-
 app.use(cors(corsOptions));
-app.use(bodyParser.json());
 
-app.get('/*', function (req, res) {
-  res.sendFile('dist/tracaja');
-});
+const porta = process.env.PORT || 8080
+
 let transporter
-const environment = {
-  email: process.env.email,
-  pass: process.env.password
-};
 
 transporter = nodemailer.createTransport({
   host: "email-ssl.com.br",
   port: 587,
   secure: false, // true for 465, false for other ports
   auth: {
-    user: environment.email,
-    pass: environment.pass,
+    user: process.env.email,
+    pass: process.env.senha,
   }
 });
 
-async function enviar(req) {
-  envio = await transporter.sendMail({
-    from: environment.email,
-    to: 'carlosgmr2304@gmail.com',
-    subject: req.body.subject,
-    replyTo: req.body.mail,
-    text: req.body.text
-  })
+async function enviar(req, res) {
+  try {
+    envio = await transporter.sendMail({
+      from: process.env.email,
+      to: 'carlosgmr2304@gmail.com',
+      subject: req.body.subject,
+      replyTo: req.body.mail,
+      text: req.body.text
 
-  console.log(envio)
+    })
+    res.status(204).send('Ok')
+    console.log(envio)
+  } catch {
+    res.status(500).send("Erro")
+    console.log("erro")
+  }
 }
 app.post('/enviarEmail', (req, res) => {
-  enviar(req)
-
-  res.status(204).send('Ok')
-
+  enviar(req, res)
 })
 
 
