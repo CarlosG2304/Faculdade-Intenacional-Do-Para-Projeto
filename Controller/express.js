@@ -43,9 +43,9 @@ async function enviar(req, res) {
     })
     res.status(204).send('Ok')
     console.log(envio)
-  } catch {
+  } catch (e) {
     res.status(500).send("Erro")
-    console.log("erro")
+    console.log("ERRO ", e.message)
   }
 }
 app.post('/enviarEmail', (req, res) => {
