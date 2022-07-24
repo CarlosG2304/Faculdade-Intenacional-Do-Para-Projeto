@@ -11,7 +11,7 @@ app.use(express.static('View'))
 app.use(bodyParser.json())
 
 var corsOptions = {
-  orgim: '/',
+  orgim: 'https://tracaja.web.app/',
   optionsSuccessStatus: 200
 }
 
