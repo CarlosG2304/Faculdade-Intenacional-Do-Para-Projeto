@@ -37,7 +37,7 @@ async function enviar(req, res) {
       from: process.env.email,
       to: 'carlosgmr2304@gmail.com',
       subject: req.body.subject,
-      replyTo: req.body.mail,
+      replyTo: req.body.email,
       text: req.body.text
 
     })
