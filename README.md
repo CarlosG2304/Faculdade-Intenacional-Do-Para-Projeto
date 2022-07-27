@@ -13,4 +13,6 @@
  [![MySQL](https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com/)
  [![Heroku](https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white)](heroku.com)
 
-## Link para o site: https://fipsuperior.herokuapp.com/
+### Authors: Dllacy Lima  E Carlos Gabriel M Rosa
+
+### Link para o site: https://fipsuperior.herokuapp.com/
