@@ -9,6 +9,7 @@ const app = express();
 app.use(express.static('View'))
 
 app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: true }))
 
 var corsOptions = {
   orgim: '/',
@@ -166,6 +167,8 @@ app.post('/formulario', (req, res, next) => {
   }
   console.log(dados)
   insert = db('usuarios').insert(dados);
+
+  console.log(req.query.nome, req.body.data)
 
   insert.then(data => {
     res.send(data)
